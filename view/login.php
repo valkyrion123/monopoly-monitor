@@ -14,6 +14,12 @@
 				<label for="password">Password:</label>
 				<input type="password" name="pass" id="login-pass" placeholder="">
 			</div>
+			<small>
+			<a href="#register">Do not have an account?</a>
+			<br>
+			<br>
+			<a href="#">Forgot password?</a>
+			</small>
 		</form>
 		 <input class='login-submit' type="submit" data-inline="true" value="Login">
 	</div>
