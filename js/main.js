@@ -27,7 +27,6 @@ $(document).ready(function(){
 		dataType: 'json',
 		type: 'POST', 
 		success: function(result){
-			console.log(result);
 			$('.user-name').html(result.name);
 		}
 	});
@@ -90,7 +89,9 @@ $(document).ready(function(){
 			dataType: 'json',
 			type: 'POST', 
 			success: function(result){
-				window.location.href = "#main-menu";
+				if(result == 'logged_in'){
+					window.location.href = "#main-menu";
+				}
 			}
 		});
 	});
