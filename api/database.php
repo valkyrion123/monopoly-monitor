@@ -21,8 +21,6 @@ class DB{
 			while($row = mysqli_fetch_assoc($result)) {
 				array_push($array_result, $row);
 			}
-		} else {
-			return "0 results";
 		}
 
 		mysqli_close($conn);

@@ -28,7 +28,7 @@ function transfer_balance_player($data){
 	$database->exec_query($query1);
 	// $database->exec_query($query2);
 
-	echo json_encode($query1);
+	echo json_encode('transfered');
 }
 
 ?>

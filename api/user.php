@@ -30,22 +30,26 @@ function login_user($data){
 	global $database;
 	$name = $data['name'];
 	$pass = $data['pass'];
+	$output = array();
 
-	$query = "SELECT pass FROM user WHERE name = '$name'";
+	$query = "SELECT id, pass FROM user WHERE name = '$name'";
 
 	$result = $database->fetch_data($query);
 
 	if(!empty($result)){
 		if(password_verify($pass, $result[0]['pass'])){
-			echo json_encode('logged_in');
+			$output['message'] = 'logged_in';
+			$output['id'] = $result[0]['id'];
 		}
 		else{
-			echo json_encode('password_mismatch');
+			$output['message'] ='password_mismatch';
 		}
 	}
 	else{
-		echo json_encode('user_not_found');
+		$output['message'] = 'user_not_found';
 	}
+
+	echo json_encode($output);
 }
 
 ?>

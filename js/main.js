@@ -89,7 +89,7 @@ $(document).ready(function(){
 			dataType: 'json',
 			type: 'POST', 
 			success: function(result){
-				if(result == 'logged_in'){
+				if(result['message'] == 'logged_in'){
 					window.location.href = "#main-menu";
 				}
 			}
