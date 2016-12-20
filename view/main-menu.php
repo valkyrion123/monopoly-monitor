@@ -1,9 +1,9 @@
 <div data-role='page' id='main-menu' data-theme='b'>
 	<div data-role='header' data-position='fixed'>
 		<h2>Monopoly</h2>
-		<!-- <a href="#main-menu" data-icon='home' data-role='button' data-transition='slide'>Home</a> -->
-	</div>	
+		<a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-b"><small>Logout</small></a>
 
+	</div>	
 	<div data-role='content' class='ui-content'>
 		<h1 align='center'><span class='user-name'>Name</span></h1>
 		<h2 align='center'>Your Money</h2>
@@ -19,4 +19,16 @@
 	<div data-role='footer' data-position="fixed">
 		<h1>&copy; Stoopid Inhooman 2016</h1>
 	</div>
+
+	<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:300px;">
+		<div role="main" class="ui-content">
+			<h3 class="ui-title">Are you sure?</h3>
+			<a href="#login" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="flow">Yay</a>
+			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Nay</a>
+
+		</div>
+	</div>
 </div>
+
+
+
