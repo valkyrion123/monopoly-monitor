@@ -10,12 +10,12 @@
 		<form>
 			<div class="ui-field-contain">
 				<label for="name">Name:</label>
-				<input type="text" name="name" id="name">
+				<input type="text" name="name" id="register-name">
 				<label for="password">Password:</label>
-				<input type="password" name="pass" id="pass" placeholder="">
+				<input type="password" name="pass" id="register-pass" placeholder="">
 			</div>
 		</form>
-		 <input type="submit" data-inline="true" value="Register">
+		 <input class='register-submit' type="submit" data-inline="true" value="Register">
 	</div>
 	<div data-role='footer' data-position="fixed">
 		<h1>&copy; Stoopid Inhooman 2016</h1>

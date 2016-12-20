@@ -54,4 +54,44 @@ $(document).ready(function(){
 			}
 		});
 	}
+
+	$('.register-submit').off().on('click', function(){
+		var requestData = {};
+		requestData = {
+			name: $('#register-name').val(),
+			pass: $('#register-pass').val(),
+		}
+		$.ajax({
+			url: "/monopoly-monitor/api/api.php",
+			data: {
+				callback: 'register_user',
+				request: JSON.stringify(requestData)
+			},
+			dataType: 'json',
+			type: 'POST', 
+			success: function(result){
+				window.location.href = "#login";
+			}
+		});
+	});
+
+	$('.login-submit').off().on('click', function(){
+		var requestData = {};
+		requestData = {
+			name: $('#login-name').val(),
+			pass: $('#login-pass').val(),
+		}
+		$.ajax({
+			url: "/monopoly-monitor/api/api.php",
+			data: {
+				callback: 'login_user',
+				request: JSON.stringify(requestData)
+			},
+			dataType: 'json',
+			type: 'POST', 
+			success: function(result){
+				window.location.href = "#main-menu";
+			}
+		});
+	});
 });
