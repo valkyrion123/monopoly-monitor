@@ -13,11 +13,12 @@
 </head>
 <body>
 
+	<?php include("view/login.php"); ?>   
+	<?php include("view/register.php"); ?>   
+
 	<?php include("view/main-menu.php"); ?>   
 	<?php include("view/player.php"); ?>   
 	<?php include("view/transfer.php"); ?>   
 	<?php include("view/bank.php"); ?>   
-
-
 </body>
 </html>

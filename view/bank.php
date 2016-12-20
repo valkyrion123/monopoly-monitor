@@ -7,7 +7,7 @@
 	<div data-role='content' class='ui-content'>
 		<h2 align='center'>Bank</h2>
 		<h2 align='center'>Balance</h2>
-		<h2 align='center'>$</h2>
+		<h2 align='center'>$<span class="bank-account">-</span></h2>
 	</div>
 
 	<div data-role='navbar' data-iconpos="left">
@@ -15,6 +15,6 @@
 	</div>
 
 	<div data-role='footer' data-position="fixed">
-		<h1>&copy; Stupid Inhooman 2016</h1>
+		<h1>&copy; Stoopid Inhooman 2016</h1>
 	</div> 
 </div>

@@ -14,6 +14,6 @@
 	</div>
 
 	<div data-role='footer' data-position="fixed">
-		<h1>&copy; Stupid Inhooman 2016</h1>
+		<h1>&copy; Stoopid Inhooman 2016</h1>
 	</div>
 </div>
