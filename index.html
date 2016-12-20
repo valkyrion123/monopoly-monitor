@@ -1,24 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<title>Monopoly E-Banking</title>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="js/main.js"></script>
+	<link rel="stylesheet" href="themes/monopoly-monitor.css" />
+  	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+  	<link rel="stylesheet" href="framework/jquery.mobile-1.4.5.css" />
+	<script src="framework/jquery-3.1.1.min"></script>
+	<script src="framework/jquery-1.11.1.min.js"></script>
+	<script src="framework/jquery.mobile-1.4.5.js"></script>
 </head>
 <body>
-<div data-role='page'>
-	<div data-role='header' class='ui-content'>
-		Header
+
+<div data-role='page' id='main-menu' data-theme='b'>
+	<div data-role='header'>
+		<div data-role='navbar'>
+		<table width="100%">
+			<td align='center' width='25%'><a href="#main-menu" data-icon='home' data-role='button' data-transition='slide'>Home</a></td>
+			<td align='center' width='50%'><h2>Monopoly</h2></td>
+			<td align='center' width='25%'></td>
+		</table>
+		</div>
+	</div>	
+	<div data-role='main' class='ui-content'>
+		<h2 align='center'>Your Money</h2>
+		<p align='center'>$ Money</p>
 	</div>
 	<div data-role='main' class='ui-content'>
-		Main
-	</div>
-	<div data-role='footer' class='ui-content'>
-		Footer
+	<a href="#player" data-role='button' data-transition='slide'>Player</a>
+	<a href="#transfer" data-role='button' data-transition='slide'>Transfer</a>
 	</div>
 </div>
+
+<div data-role='page' id='player' data-theme='b'>
+	<div data-role='header'>
+		<div data-role='navbar'>
+		<table width="100%">
+			<td align='center' width='25%'><a href="#main-menu" data-icon='home' data-role='button' data-transition='slide'>Home</a></td>
+			<td align='center' width='50%'><h2>Monopoly</h2></td>
+			<td align='center' width='25%'></td>
+		</table>
+		</div>
+	</div>	
+	<div data-role='main' class='ui-content'>
+		<h2 align='center'>Players</h2>
+	</div>
+	<div data-role='main' class='ui-content'>
+		
+	</div>
+</div>
+
 </body>
 </html>
