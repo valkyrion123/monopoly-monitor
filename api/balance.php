@@ -8,8 +8,8 @@ function get_current_balance($data){
 	$user = $data['user'];
 	$session = $data['session'];
 
-	$query = "SELECT balance FROM game_data WHERE user_id=$user AND session_id=$session";
-	$result = $database->execute_query($query);
+	$query = "SELECT balance FROM game_data WHERE user_id = $user AND session_id = $session";
+	$result = $database->fetch_data($query);
 
 	echo json_encode($result[0]);
 }
