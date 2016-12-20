@@ -7,7 +7,7 @@ class DB{
 	public $password = "";
 	public $dbname = "monopoly";
 
-	function execute_query($query){
+	function fetch_data($query){
 		$array_result = array();
 		$conn = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname);
 
@@ -28,6 +28,18 @@ class DB{
 		mysqli_close($conn);
 
 		return $array_result;
+	}
+
+	function exec_query($query){
+		$conn = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname);
+
+		if (!$conn) {
+			return("Connection failed: " . mysqli_connect_error());
+		}
+
+		$result = mysqli_query($conn, $query);
+
+		mysqli_close($conn);
 	}
 }
 ?>

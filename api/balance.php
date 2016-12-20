@@ -14,8 +14,21 @@ function get_current_balance($data){
 	echo json_encode($result[0]);
 }
 
-function transfer_balance($data){
-	echo json_encode("1000");
+function transfer_balance_player($data){
+	global $database;
+
+	$from = $data['from'];
+	$to = $data['to'];
+	$amount = $data['amount'];
+	$session = $data['session'];
+
+	$query1 = "UPDATE game_data SET balance = balance + $amount WHERE session_id = $session AND user_id = $to";
+	// $query2 = "UPDATE game_data SET balance = balance - amount WHERE game_data.id = session AND user_id = $from";
+
+	$database->exec_query($query1);
+	// $database->exec_query($query2);
+
+	echo json_encode($query1);
 }
 
 ?>
