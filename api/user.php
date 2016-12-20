@@ -3,11 +3,14 @@ include_once('database.php');
 
 $database = new DB();
 
-function get_user($db){
+function get_user($data){
+	global $database;
+	
 	$query = "SELECT * FROM user";
 
-	$result = $db->execute_query($query);
+	$result = $database->fetch_data($query);
 
 	return json_encode($result);
 }
+
 ?>
