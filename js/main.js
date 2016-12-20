@@ -18,6 +18,20 @@ $(document).ready(function(){
 		}
 	});
 
+	$.ajax({
+		url: "/monopoly-monitor/api/api.php",
+		data: {
+			callback: 'get_user',
+			request: JSON.stringify(requestData)
+		},
+		dataType: 'json',
+		type: 'POST', 
+		success: function(result){
+			console.log(result);
+			$('.user-name').html(result.name);
+		}
+	});
+
 	//DISABLE THIS WHEN NOT DEBUGGGING
 	var debug = true;
 	if(!debug){

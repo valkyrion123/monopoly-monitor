@@ -10,7 +10,7 @@ function get_user($data){
 
 	$result = $database->fetch_data($query);
 
-	return json_encode($result);
+	echo json_encode($result[0]);
 }
 
 ?>
