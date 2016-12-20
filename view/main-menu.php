@@ -23,7 +23,7 @@
 	<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:300px;">
 		<div role="main" class="ui-content">
 			<h3 class="ui-title">Are you sure?</h3>
-			<a href="#login" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="flow">Yay</a>
+			<a href="#login" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b confirm-logout" data-transition="flow">Yay</a>
 			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Nay</a>
 
 		</div>

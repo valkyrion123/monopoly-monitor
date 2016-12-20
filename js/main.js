@@ -95,4 +95,9 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	$('.confirm-logout').off().on('click', function(){
+		$('#login-name').val("");
+		$('#login-pass').val("");
+	});
 });
