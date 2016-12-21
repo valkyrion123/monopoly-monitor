@@ -2,6 +2,12 @@
 //Put all related database config and call here
 
 class DB{
+
+	// public $servername = "mysql.idhostinger.com";
+ //    public $username = "u989440763_root";
+ //    public $password = "yGP90VxP9G";
+ //    public $dbname = "u989440763_monop";
+
 	public $servername = "localhost";
 	public $username = "root";
 	public $password = "";
@@ -12,7 +18,7 @@ class DB{
 		$conn = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname);
 
 		if (!$conn) {
-			return("Connection failed: " . mysqli_connect_error());
+			die("Connection failed: " . mysqli_connect_error());
 		}
 
 		$result = mysqli_query($conn, $query);

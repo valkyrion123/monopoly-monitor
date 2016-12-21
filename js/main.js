@@ -6,7 +6,7 @@ $(document).ready(function(){
 	};
 
 	$.ajax({
-		url: "/monopoly-monitor/api/api.php",
+		url: "/api/api.php",
 		data: {
 			callback: 'get_current_balance',
 			request: JSON.stringify(requestData)
@@ -19,7 +19,7 @@ $(document).ready(function(){
 	});
 
 	$.ajax({
-		url: "/monopoly-monitor/api/api.php",
+		url: "/api/api.php",
 		data: {
 			callback: 'get_user',
 			request: JSON.stringify(requestData)
@@ -41,7 +41,7 @@ $(document).ready(function(){
 			session: 1
 		};
 		$.ajax({
-			url: "/monopoly-monitor/api/api.php",
+			url: "/api/api.php",
 			data: {
 				callback: 'transfer_balance_player',
 				request: JSON.stringify(requestData)
@@ -61,7 +61,7 @@ $(document).ready(function(){
 			pass: $('#register-pass').val(),
 		}
 		$.ajax({
-			url: "/monopoly-monitor/api/api.php",
+			url: "/api/api.php",
 			data: {
 				callback: 'register_user',
 				request: JSON.stringify(requestData)
@@ -81,7 +81,7 @@ $(document).ready(function(){
 			pass: $('#login-pass').val(),
 		}
 		$.ajax({
-			url: "/monopoly-monitor/api/api.php",
+			url: "/api/api.php",
 			data: {
 				callback: 'login_user',
 				request: JSON.stringify(requestData)
